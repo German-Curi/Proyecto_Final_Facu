@@ -1,0 +1,80 @@
+# Archivo .htaccess
+
+RewriteEngine on
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^home$ controllers/Inicio.php
+RewriteRule ^cursos$ controllers/Cursos.php
+RewriteRule ^inicio-de-sesion$ controllers/login.php
+RewriteRule ^cerrar-sesion$ controllers/logout.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^menu-principal$ controllers/MenuPrincipal.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^lista-profesores$ controllers/ListaProfesores.php
+
+RewriteRule ^lista-profesores-([0-9]+)$ controllers/ListaProfesores.php?profe=
+
+RewriteRule ^lista-profesores-([a-zA-Z]+)$ controllers/ListaProfesores.php?apellidoprofe=
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^lista-cursos$ controllers/ListaCursos.php
+
+RewriteRule ^lista-cursos-([0-9]+)$ controllers/ListaCursos.php?
+
+RewriteRule ^lista-cursos-([a-zA-Z]+)$ controllers/ListaCursos.php?nombrecurso=
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^lista-alumnos$ controllers/ListaAlumnos.php
+
+RewriteRule ^lista-alumnos-([0-9]+)$ controllers/ListaAlumnos.php?alu=
+
+RewriteRule ^lista-alumnos-([a-zA-Z]+)$ controllers/ListaAlumnos.php?apellidoAlu=
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^sesion-alumno$ controllers/DarinfoAlumno.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^sesion-profesor$ controllers/DarinfoProfesor.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^inscripcion-curso$ controllers/InscribirAlumno.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^facturacion$ controllers/Facturar.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^confirmar-factura$ controllers/ConfirmarFactura.php
+
+RewriteRule ^lista-facturas$ controllers/ListaFacturas.php
+
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^registrar$ controllers/Registrar.php
+
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^registrarprof$ controllers/RegistrarProf.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^registrarcurs$ controllers/RegistrarCurs.php
+
+# --------------------------------------------------------------------------------------------
+
+RewriteRule ^asignarprofcurs$ controllers/AsignarProfCurs.php
+
+
